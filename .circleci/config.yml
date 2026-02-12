@@ -40,13 +40,12 @@ jobs:
           command: |
             cd labo01_frontend
             npm run build
-            ls
 
       - run:
           name: Copier frontend/build vers backend/public
           command: |
             mkdir -p labo01_backend/public
-            cp -r labo01_frontend/build/* labo01_backend/public/
+            cp -rT labo01_frontend/build/ labo01_backend/public/
 
       - persist_to_workspace:
           root: .
