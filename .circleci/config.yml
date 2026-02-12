@@ -77,5 +77,3 @@ workflows:
           requires:
             - integrationFrontend
 
-
-
